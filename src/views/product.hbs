@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+  <meta charset="utf-8">
+  <title>Producto</title>
+</head>
+
+
+<body>
+  {{#if error}}
+    <p>{{error}}</p>
+
+  {{else}}
+
+    <h1>{{product.title}}</h1>
+    <p>precio: ${{product.price}}</p>
+    <p>categoria: {{product.category}}</p>
+    <p>status: {{#if product.status}}disponible{{else}}no disponible{{/if}}</p>
+    <p>{{product.description}}</p>
+    <button class="btn-add" data-pid="{{product._id}}">agregar al carrito</button>
+    <p><a href="/products">volver</a></p>
+    
+  {{/if}}
+
+
+  <script src="/js/addToCart.js"></script>
+
+
+</body>
+</html>

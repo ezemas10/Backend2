@@ -1,0 +1,145 @@
+[
+ {
+  "id": 2,
+  "title": "Curauña",
+  "description": "Preparado líquido de uso externo formulado para tratar hongos en las uñas",
+  "code": "2",
+  "price": 20000,
+  "status": true,
+  "stock": 5,
+  "category": "preparados",
+  "thumbnails": [
+   "https://res.cloudinary.com/drzhqvhh9/image/upload/v1754163052/product2_wrye1g.webp"
+  ]
+ },
+ {
+  "id": 3,
+  "title": "Ortesis Polidigital",
+  "description": "Gel Polímero",
+  "code": "3",
+  "price": 5000,
+  "status": true,
+  "stock": 4,
+  "category": "ortopedia",
+  "thumbnails": [
+   "https://res.cloudinary.com/drzhqvhh9/image/upload/v1754163053/product3_xna4nj.webp"
+  ]
+ },
+ {
+  "id": 6,
+  "title": "Pasem Freshar",
+  "description": "Crema hidratante para pies secos, con karité y urea",
+  "code": "5",
+  "price": 7000,
+  "status": true,
+  "stock": 6,
+  "category": "cremas",
+  "thumbnails": [
+   "https://res.cloudinary.com/drzhqvhh9/image/upload/v1754163056/product6_ae0pak.webp"
+  ]
+ },
+ {
+  "id": 7,
+  "title": "Crema para pies",
+  "description": "Crema hidratante intensiva",
+  "code": "CREMA123",
+  "price": 4500,
+  "status": true,
+  "stock": 20,
+  "category": "cremas",
+  "thumbnails": [
+   "https://upload.wikimedia.org/wikipedia/commons/6/6b/Feet_cream.jpg"
+  ]
+ },
+ {
+  "id": 9,
+  "title": "Plantilla Ortopédica ConfortGel",
+  "description": "Plantilla de gel diseñada para aliviar la presión y mejorar la postura al caminar.",
+  "code": "PLANT001",
+  "price": 8700,
+  "status": true,
+  "stock": 18,
+  "category": "ortopedia",
+  "thumbnails": [
+   "https://upload.wikimedia.org/wikipedia/commons/3/3f/Shoe_insole_gel.jpg"
+  ]
+ },
+ {
+  "id": 13,
+  "title": "Talco Podológico Antibacteriano 3",
+  "description": "Talco desodorante con óxido de zinc y ácido bórico, ideal para mantener los pies secos y prevenir hongos.",
+  "code": "TALC007",
+  "price": 12400,
+  "status": true,
+  "stock": 30,
+  "category": "podologia",
+  "thumbnails": [
+   "https://res.cloudinary.com/drzhqvhh9/image/upload/v1754163052/talco_podologico_antibacteriano.webp"
+  ]
+ },
+ {
+  "id": 14,
+  "title": "Talco Podológico Antibacteriano 4",
+  "description": "Talco desodorante con óxido de zinc y ácido bórico, ideal para mantener los pies secos y prevenir hongos.",
+  "code": "TALC007",
+  "price": 12400,
+  "status": true,
+  "stock": 30,
+  "category": "podologia",
+  "thumbnails": [
+   "https://res.cloudinary.com/drzhqvhh9/image/upload/v1754163052/talco_podologico_antibacteriano.webp"
+  ]
+ },
+ {
+  "id": 15,
+  "title": "Talco Podológico Antibacteriano 2000",
+  "description": "Talco desodorante con óxido de zinc y ácido bórico, ideal para mantener los pies secos y prevenir hongos.",
+  "code": "TALC007",
+  "price": 12400,
+  "status": true,
+  "stock": 30,
+  "category": "podologia",
+  "thumbnails": [
+   "https://res.cloudinary.com/drzhqvhh9/image/upload/v1754163052/talco_podologico_antibacteriano.webp"
+  ]
+ },
+ {
+  "id": 17,
+  "title": "Talco Podológico Antibacteriano 3000",
+  "description": "Talco desodorante con óxido de zinc y ácido bórico, ideal para mantener los pies secos y prevenir hongos.",
+  "code": "TALC007",
+  "price": 12400,
+  "status": true,
+  "stock": 30,
+  "category": "podologia",
+  "thumbnails": [
+   "https://res.cloudinary.com/drzhqvhh9/image/upload/v1754163052/talco_podologico_antibacteriano.webp"
+  ]
+ },
+ {
+  "id": 18,
+  "title": "Talco Podológico Antibacteriano 4000",
+  "description": "Talco desodorante con óxido de zinc y ácido bórico, ideal para mantener los pies secos y prevenir hongos.",
+  "code": "TALC007",
+  "price": 12400,
+  "status": true,
+  "stock": 30,
+  "category": "podologia",
+  "thumbnails": [
+   "https://res.cloudinary.com/drzhqvhh9/image/upload/v1754163052/talco_podologico_antibacteriano.webp"
+  ]
+ },
+ {
+  "id": 20,
+  "title": "Spray Refrescante para Pies",
+  "description": "Spray con mentol y eucalipto que refresca, desodoriza y alivia la fatiga de los pies luego de largas jornadas.",
+  "code": "SPRAY009",
+  "price": 16300,
+  "status": true,
+  "stock": 28,
+  "category": "podologia",
+  "thumbnails": [
+   "https://res.cloudinary.com/drzhqvhh9/image/upload/v1754163052/spray_refrescante_pies.webp"
+  ]
+ }
+]
