@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>¡Bienvenido {{user.first_name}}!</h2>
+
+  <div class="user-info">
+    <p><strong>Email:</strong> {{user.email}}</p>
+    <p><strong>Rol:</strong> {{user.role}}</p>
+  </div>
+
+  <form method="GET" action="/users/logout">
+    <button type="submit">Cerrar sesion</button>
+  </form>
+</div>

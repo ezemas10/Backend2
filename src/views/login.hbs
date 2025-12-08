@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Iniciar sesion</h2>
+
+  {{#if error}}
+    <div class="alert">Login failed! Revisa tus credenciales</div>
+  {{/if}}
+
+  <form method="POST" action="/users/login">
+    <input name="email" placeholder="Email" type="email" required />
+    <input name="password" placeholder="Contrasena" type="password" required />
+    <button type="submit">Ingresar</button>
+  </form>
+</div>
