@@ -9,7 +9,8 @@ import viewsRouter from './src/routes/viewsRouter.js'
 import cartsRouter from './src/routes/cartsRouter.js'
 import productsRouter from './src/routes/productsRouter.js'
 
-import { connDB } from './src/config/db.js'
+import connectDB from './src/config/db.js'
+
 import initializePassport from './src/config/passport.config.js'
 
 dotenv.config()
@@ -81,4 +82,4 @@ const serverHTTP = app.listen(PORT, ()=>{
 
 //const serverSocket = new Server(serverHTTP)
 
-connDB()
+connectDB()
