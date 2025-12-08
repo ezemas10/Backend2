@@ -39,3 +39,11 @@ export async function registerUser(req, res) {
     res.cookie('currentUser', token, { signed: true, httpOnly: true })
     res.redirect('/current')
 }
+
+
+export function logoutUser(req, res) {
+ 
+  res.clearCookie('currentUser')
+
+  res.redirect('/login')
+}
