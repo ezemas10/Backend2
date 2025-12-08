@@ -1,13 +1,17 @@
-const {Router} = require("express")
+import { Router } from 'express'
 
-const { cartsModel } = require("../dao/models/cartsModel");
-const { productsModel } = require("../dao/models/productsModel.js");
+import { cartsModel } from '../dao/models/cartsModel.js'
+import { productsModel } from '../dao/models/productsModel.js'
 
-const ProductsManager = require("../dao/ProductsManager.js");
-const CartsManager = require("../dao/CartsManager.js");
+import ProductsManager from '../dao/ProductsManager.js'
+import CartsManager from '../dao/CartsManager.js'
+
+
+import { passportCall } from '../middlewares/passportAuth.js'
+import User from '../models/User.js'
+
 
 const viewsRouter=Router()
-
 
 
 viewsRouter.get("/products/:pid", async (req, res) => {
@@ -273,5 +277,26 @@ viewsRouter.get("/carts/:cid", async (req, res) => {
 //   }
 // )
 
+viewsRouter.get('/login', (req, res) => {
+    const error = req.query.error
+    res.render('login', {error})
+})
 
-module.exports = viewsRouter
+viewsRouter.get('/register', (req, res) => {
+    const error = req.query.error
+    res.render('register', {error})
+})
+
+viewsRouter.get('/failureLogin', (req, res) => {
+    const error = req.query.error
+    res.render('login', {error})
+})
+
+
+viewsRouter.get('/current', passportCall('jwt'), async (req, res) => {
+    const user = await User.findById(req.user.id).lean()
+    res.render('current', {user})
+})
+
+
+export default viewsRouter
