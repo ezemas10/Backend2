@@ -10,13 +10,14 @@ router.get('/current', passportCall('jwt'), async (req, res) => {
 
         if (!user) {
             return res.status(404).send({
-                status: 'error',
+                
                 message: 'Usuario no encontrado'
+
             })
         }
 
         return res.send({
-            status: 'success',
+            
             payload: {
                 id: user._id,
                 first_name: user.first_name,
@@ -26,13 +27,19 @@ router.get('/current', passportCall('jwt'), async (req, res) => {
                 role: user.role,
                 cart: user.cart
             }
+
         })
-    } catch (err) {
-        return res.status(500).send({
-            status: 'error',
-            message: err.message
-        })
+
+    } 
+    
+    catch(error){
+
+    console.log(error)
+
+    res.status(500).send("Internal Server Error");
+
     }
+    
 })
 
 export default router
