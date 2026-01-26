@@ -14,14 +14,18 @@
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",
     "mongodb": "6.20",
     "mongoose": "^8.19.2",
     "mongoose-paginate-v2": "^1.9.1",
+    "nodemailer": "^7.0.12",
+    "nodemailer-express-handlebars": "^7.0.0",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "uuid": "^13.0.0"
   }
 }

@@ -1,7 +1,7 @@
 import { Router } from 'express'
 
 import { passportCall } from '../middlewares/passportAuth.js'
-import User from '../models/User.js'
+import User from '../dao/mongodb/models/users.model.js'
 
 
 const viewsRouter=Router()

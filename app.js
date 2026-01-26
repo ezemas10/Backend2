@@ -8,6 +8,11 @@ import usersRouter from './src/routes/usersRouter.js'
 import viewsRouter from './src/routes/viewsRouter.js'
 import sessionsRouter from './src/routes/sessionsRouter.js'
 
+import cartsRouter from './src/routes/cartsRouter.js'
+import productsRouter from './src/routes/productsRouter.js'
+import emailRouter from './src/routes/email.router.js'
+
+
 import connectDB from './src/config/db.js'
 
 import initializePassport from './src/config/passport.config.js'
@@ -34,11 +39,17 @@ app.use(passport.initialize())
 
 app.use("/", viewsRouter)
 
-app.use('/users', usersRouter)
+// app.use('/users', usersRouter)
 
 app.use('/api/sessions', sessionsRouter)
 
 app.use("/api/users", usersRouter) 
+
+app.use("/api/carts", cartsRouter)
+
+app.use("/api/products", productsRouter)
+
+app.use("/api/email", emailRouter)
 
 
 const serverHTTP = app.listen(PORT, ()=>{

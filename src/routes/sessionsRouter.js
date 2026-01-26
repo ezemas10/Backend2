@@ -1,46 +1,54 @@
-import express from 'express'
-import { passportCall } from '../middlewares/passportAuth.js'
-import User from '../models/User.js'
+import express from "express"
+import { passportCall } from "../middlewares/passportAuth.js"
+import { userService } from "../services/user.service.js"
+import UsersDTO from "../dto/users.dto.js"
+import { forgotPassword, resetPassword } from "../controllers/userController.js"
 
 const router = express.Router()
 
-router.get('/current', passportCall('jwt'), async (req, res) => {
+router.get("/current", passportCall("jwt"), async (req, res) => {
+
     try {
-        const user = await User.findById(req.user.id).lean()
+    const user = await userService.getUserById(req.user.id)
+    const userDTO = new UsersDTO(user)
 
-        if (!user) {
-            return res.status(404).send({
-                
-                message: 'Usuario no encontrado'
+    return res.send({
+      payload: userDTO,
+    })
+  }
 
-            })
-        }
-
-        return res.send({
-            
-            payload: {
-                id: user._id,
-                first_name: user.first_name,
-                last_name: user.last_name,
-                email: user.email,
-                age: user.age,
-                role: user.role,
-                cart: user.cart
-            }
-
-        })
-
-    } 
-    
-    catch(error){
+  catch (error) {
 
     console.log(error)
+    return res.status(500).send("Internal Server Error")
 
-    res.status(500).send("Internal Server Error");
-
-    }
-    
+  }
 })
 
-export default router
 
+router.get("/reset-password/:token", (req, res) => {
+
+  const { token } = req.params
+
+  return res.send(`
+    <h2>Reset password</h2>
+    <form method="POST" action="/api/sessions/reset-password/${token}">
+      <input type="password" name="password" placeholder="Nuevo password" required />
+      <button type="submit">Cambiar password</button>
+    </form>
+  `)
+
+})
+
+
+router.post("/forgot-password", async (req, res) => {
+  return forgotPassword(req, res)
+})
+
+
+router.post("/reset-password/:token", async (req, res) => {
+  return resetPassword(req, res)
+})
+
+
+export default router
